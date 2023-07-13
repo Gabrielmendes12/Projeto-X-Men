@@ -1,0 +1,40 @@
+@media (max-width: 1120px){
+    .cabecalho .logo {
+        max-width: 190px;
+    }
+    /* a partir de 1120 px ao reduzir a tela no navegador, o conteúdo começa a se ajustar de forma responsiva */
+
+    .selecao-de-personagens{
+        flex-direction: column-reverse; /* permite visualizar melhor a quebra dos elementos, e o reverse troca a disposição das seções a partir do 1120 px pra menos. */
+        max-width: 430px;
+        margin: 0 auto;
+        /* 0 em cima e em baixo e distribui automaticamente o espaço q sobrou para a esquerda e direita da tela de visualização */
+    }
+
+    .selecao-de-personagens .personagens{
+        margin-top: 37px; /* desgruda esta seção do conteúdo do personagem selecionado */
+    }
+
+    .selecao-de-personagens .personagens .titulo{
+        font-size: 15px;
+    }
+
+    .selecao-de-personagens .lista-de-personagens{
+        gap: 9px
+    }
+
+    .selecao-de-personagens .personagem img{
+        width: 80px;
+    }
+
+    .personagem-selecionado .personagem-grande{
+        width: 350px;
+        height: 350px;
+    }
+
+    .personagem-selecionado .descricao-personagem{
+        width: 80%;
+        font-size: 16px;
+        margin: 20px auto
+    }
+}

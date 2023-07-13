@@ -1,0 +1,15 @@
+/*Aplicando um seletor de estilo em uma tag (h1), porém estilizar uma classe é mais recomendado*/
+
+/*classe : ".título " por exemplo */
+
+/* esse asteristico antes das chaves, indica que será aplicado essa regra para todas as tags */
+
+*{
+    margin: 0; /*espaçamento EXTERNO entre os elementos*/
+    padding: 0; /*espaçamento INTERNO entre os elementos*/
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none; 
+}

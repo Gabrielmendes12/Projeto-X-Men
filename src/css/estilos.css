@@ -1,0 +1,98 @@
+body{
+    font-family: "Oxanium", cursive;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* seletor de classe para um pseudo-elemento */
+body::before{
+    content: "";
+    background-image: url(../imagens/bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2; 
+    /* fundo fica mais opaco e reflete melhor o conteúdo da imagem por cima */
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center; /* aqui alinhou na horizontal por padrão (linhas) */
+}
+
+.selecao-de-personagens{
+    display: flex; /* muito importante na arrumação da visualização do conteúdo
+    por padrão é uma do lado da outra*/
+    align-items: center; /* aqui alinhou na vertical por padrão (colunas) */
+    gap: 30px; /* espaçamento entre as seções */
+    min-height: calc(100vh - 152px);
+    /* altura mínima = cálculo, onde a altura da janela de exibição é 100% height ou seja ocupa a tela inteira e eu tiro 152 px que é a altura do cabeçalho quando vou em inspecionar */
+    justify-content: center;
+}
+
+
+/* estilizando a classe cabeçalho que é a tag "pai" header. A tag img que é onde tenho o logo svg do x-men é uma tag filha da header, pois está incluída nela.
+Para ajustar a disposição dela, devo centralizá-la na tag cabecalho.*/
+
+.selecao-de-personagens .lista-de-personagens{
+    display: flex; /* elementos dispostos em linha */
+    flex-wrap: wrap; /*realiza uma quebra nos elementos para a próxima linha se terminou o espaço destinado a div --> wrap = envolver */
+    gap: 30px; /* espaçamento entre os cards */
+    justify-content: center;
+}
+
+.selecao-de-personagens .personagens{
+    display: flex; /* por padrão é um ao lado do outro(row) */
+    flex-direction: column; /* altero pra ficar um embaixo do outro */
+    align-items: center;
+    max-width: 585px; 
+    gap: 25px;
+}
+
+.selecao-de-personagens .personagens .titulo{
+    font-size: 20px;
+    letter-spacing: 4px; /*espaçamento entre as letras */
+    text-transform: uppercase; /* texto em letra maiúscula*/
+    border-bottom: 2px solid #47f4ff;
+    /* borda embaixo do texto */
+    width: 100%;
+    text-align: center;  
+}
+
+.lista-de-personagens .personagens img{
+    width: 100%;
+    height: 100%;
+}
+
+/* essa classe será feita com javascript */
+.lista-de-personagens .personagem.selecionado{
+    box-shadow: 0px 0px 24px 5px #0271f7;
+}
+
+.personagem-selecionado{
+    text-align: center;
+    max-height: 530px;
+}
+
+.personagem-selecionado .personagem-grande{
+    width: 430px;
+    height: 430px;
+}
+
+.personagem-selecionado .nome-personagem{
+    border-bottom: 2px solid #47f4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.personagem-selecionado .descricao-personagem{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    width: 420px;
+}
